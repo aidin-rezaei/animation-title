@@ -14,7 +14,8 @@
     let showingalert = false
     let count = 0
     // let underline = '_'
-    let down = ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_'];
+    let down = ['_'];
+    for (let i = 0; i <= 30; i++)down.push("_")
     let up = ['_'];
     const interval = setInterval(() => {
         count++
@@ -22,13 +23,14 @@
         up.push("_")
         down.length--
         document.title = down.join("") + '🚗' + up.join("")
-        if (count == 29) {
+        if (count == 32) {
             count = 0
-            down = ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_'];
+            down = ['_'];
+            for (let i = 0; i <= 30; i++)down.push("_")
             up = ['_'];
         }
         showingalert = !showingalert
-    }, 500)
+    }, 100)
 </script>
 
 </html>
