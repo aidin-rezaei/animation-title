@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>_________________________________</title>
 </head>
+
 <body>
-    
 </body>
+<script>
+    let showingalert = false
+    let count = 0
+    // let underline = '_'
+    let down = ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_'];
+    let up = ['_'];
+    const interval = setInterval(() => {
+        count++
+        console.log(count)
+        up.push("_")
+        down.length--
+        document.title = down.join("") + '🚗' + up.join("")
+        if (count == 29) {
+            count = 0
+            down = ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_'];
+            up = ['_'];
+        }
+        showingalert = !showingalert
+    }, 500)
+</script>
+
 </html>
